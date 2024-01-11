@@ -2,10 +2,10 @@
 
 Name:      mingw-gettext
 Version:   0.21
-Release:   4%{?dist}
+Release:   5%{?dist}
 Summary:   GNU libraries and utilities for producing multi-lingual messages
 
-License:   GPLv2+ and LGPLv2+
+License:   GPL-2.0-or-later AND LGPL-2.0-or-later
 URL:       http://www.gnu.org/software/gettext/
 Source0:   https://ftp.gnu.org/pub/gnu/gettext/gettext-%{version}.tar.xz
 # Don't override various *printf macros in C++, they collide with the std::xxx counterparts
@@ -201,6 +201,10 @@ find %{buildroot} -name "*.la" -delete
 
 
 %changelog
+* Mon Aug 7 2023 Konstantin Kostiuk <kkostiuk@redhat.com> - 0.21-5
+- Update license to SPDX format
+- Resolves: RHEL-1054
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 0.21-4
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
